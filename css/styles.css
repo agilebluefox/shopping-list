@@ -21,6 +21,8 @@ body {
 .container {
     max-width: 675px;
     margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .title {
@@ -28,6 +30,8 @@ body {
     font-size: 3rem;
     font-weight: 400;
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
     /* For smaller displays */
     line-height: 4rem;
 }
@@ -74,12 +78,7 @@ body {
     width: 70%;
 }
 
-button.add i {
-
-}
-
 button.add {
-    margin: 1rem;
     padding: 0.4rem 0.8rem;
     background-color: red;
     color: black;
