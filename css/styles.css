@@ -1,0 +1,54 @@
+/* Debugging styles */
+* {
+    border: 1px solid red;
+}
+
+/* General tag styles */
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page layout and class styles */
+
+.container {
+    max-width: 675px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'Rock Salt', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    /* For smaller displays */
+    line-height: 4rem;
+}
+
+.list-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.list {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+.list-item span {
+    padding-left: 1rem;
+}
+
+
+/* Input styles */
+
+#add-item {
+    text-align: center;
+}
