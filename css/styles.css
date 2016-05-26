@@ -13,6 +13,7 @@ body {
     background-color: whitesmoke;
     margin: 0;
     padding: 0;
+    font-size: 1.2rem ;
 }
 
 /* Page layout and class styles */
@@ -40,15 +41,47 @@ body {
 .list {
     list-style-type: none;
     padding: 1rem;
+    border-top: 1px solid lightgrey;
 }
 
-.list-item span {
+.list-item {
+    line-height: 1.5rem;
+    padding-top: 1rem;
+}
+
+.list-item i.begin {
+    padding-right: 1rem;;
+}
+
+.list-item i.end {
     padding-left: 1rem;
 }
 
+.checked, .done {
+    text-decoration: line-through;
+    color: darkred;
+}
 
 /* Input styles */
 
 #add-item {
     text-align: center;
+    padding: .5rem;
+}
+
+#add-item input {
+    line-height: 2rem;
+    width: 70%;
+}
+
+button.add i {
+
+}
+
+button.add {
+    margin: 1rem;
+    padding: 0.4rem 0.8rem;
+    background-color: red;
+    color: black;
+    border-radius: 5px;
 }
