@@ -54,11 +54,13 @@ body {
 }
 
 .list-item i.begin {
-    padding-right: 1rem;;
+    padding-right: 1rem;
+    cursor: pointer;
 }
 
 .list-item i.end {
     padding-left: 1rem;
+    cursor: pointer;
 }
 
 .checked, .done {
