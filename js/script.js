@@ -1,18 +1,7 @@
 $(document).ready(function() {
 
-    // Use the click function to add and remove the appropriate class
+    // Use the click action to add and remove the appropriate class
     // when the user clicks on the checkbox icon
-    // $( "i.checkbox" ).click(function() {
-    //     if ($(this).hasClass( "fa-square-o")) {
-    //         $(this).removeClass( "fa-square-o" ).addClass( "fa-check-square-o" );
-    //     } else if ($(this).hasClass( "fa-check-square-o" )) {
-    //         $(this).removeClass( "fa-check-square-o" ).addClass( "fa-square-o" );
-    //     };
-    //     // Finally, add or remove the "done" class to the list item
-    //     $(this).parent( "li" ).toggleClass( "done" );
-    // });
-
-    // Alternative syntax from jQuery API
     $('ul.list').on('click', 'li', function() {
         $(this).toggleClass('done');
 
@@ -26,8 +15,8 @@ $(document).ready(function() {
     });
 
     // Use the remove function to delete the list item selected
-    $( "i.remove" ).click(function() {
-        $(this).parent( "li" ).remove();
+    $('ul.list').on('click', '.remove', function() {
+        $(this).parent('li').remove();
     });
 
     // Use the append function to add an item to the list
