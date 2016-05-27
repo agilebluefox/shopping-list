@@ -1,31 +1,37 @@
 $(document).ready(function() {
-    // set a variable to contain the icon class to target
-    var checkbox = $( "i.checkbox" );
 
     // Use the click function to add and remove the appropriate class
     // when the user clicks on the checkbox icon
-    checkbox.click(function() {
-        if ($(this).hasClass( "fa-square-o")) {
-            $(this).removeClass( "fa-square-o" ).addClass( "fa-check-square-o" );
-        } else if ($(this).hasClass( "fa-check-square-o" )) {
-            $(this).removeClass( "fa-check-square-o" ).addClass( "fa-square-o" );
-        };
-        // Finally, add or remove the "done" class to the list item
-        $(this).parent( "li" ).toggleClass( "done" );
+    // $( "i.checkbox" ).click(function() {
+    //     if ($(this).hasClass( "fa-square-o")) {
+    //         $(this).removeClass( "fa-square-o" ).addClass( "fa-check-square-o" );
+    //     } else if ($(this).hasClass( "fa-check-square-o" )) {
+    //         $(this).removeClass( "fa-check-square-o" ).addClass( "fa-square-o" );
+    //     };
+    //     // Finally, add or remove the "done" class to the list item
+    //     $(this).parent( "li" ).toggleClass( "done" );
+    // });
+
+    // Alternative syntax from jQuery API
+    $('ul.list').on('click', 'li', function() {
+        $(this).toggleClass('done');
+
+        if ($(this).children('i.checkbox').hasClass( "fa-square-o" )) {
+            $(this).children('i.checkbox').removeClass( "fa-square-o" );
+            $(this).children('i.checkbox').addClass( "fa-check-square-o" );
+        } else {
+            $(this).children('i.checkbox').removeClass( "fa-check-square-o" );
+            $(this).children('i.checkbox').addClass( "fa-square-o" );
+        }
     });
 
-    // Set a variable to contain the target for the delete action
-    var trash = $( "i.remove" );
-
     // Use the remove function to delete the list item selected
-    trash.click(function() {
+    $( "i.remove" ).click(function() {
         $(this).parent( "li" ).remove();
     });
 
     // Use the append function to add an item to the list
-    var add = $( "#add-item" );
-
-    add.submit( function( event ) {
+    $( "#add-item" ).submit( function( event ) {
         console.log( $("input").val() );
         if ( $("input").val() !== '' ) {
             $("ul.list").append('<li class="list-item">\
