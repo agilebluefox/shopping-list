@@ -14,7 +14,12 @@ $(document).ready(function() {
         $(this).parent( "li" ).toggleClass("done");
     });
 
+    // Set a variable to contain the target for the delete action
+    var trash = $( "i.remove");
 
-
+    // Use the remove function to delete the list item selected
+    trash.click(function() {
+        $(this).parent("li").remove();
+    });
 
 });
