@@ -53,17 +53,17 @@ body {
     padding-top: 1rem;
 }
 
-.list-item i.begin {
+.checkbox {
     padding-right: 1rem;
     cursor: pointer;
 }
 
-.list-item i.end {
+.remove {
     padding-left: 1rem;
     cursor: pointer;
 }
 
-.checked, .done {
+.done {
     text-decoration: line-through;
     color: darkred;
 }
@@ -82,7 +82,7 @@ body {
 
 button.add {
     padding: 0.4rem 0.8rem;
-    background-color: red;
+    background-color: forestgreen;
     color: black;
     border-radius: 5px;
 }
