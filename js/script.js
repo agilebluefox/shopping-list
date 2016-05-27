@@ -33,7 +33,11 @@ $(document).ready(function() {
                 + $("input").val()
                 + '</span><i class="fa fa-trash remove" aria-hidden="true"></i></li>');
             console.log("You're adding a list item");
-            event.preventDefault();  //didn't work without this line (see jquery api)
+            //didn't work without this line (see jquery api)
+            // It seems like this is necessary to prevent the browser's
+            // default action which is to submit the form
+            event.preventDefault();
+            this.reset();
         };
     });
 
